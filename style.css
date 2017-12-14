@@ -1,0 +1,56 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #dedfe0;
+
+}
+
+h1 {
+font-size: 2.5em;
+font-family: 'Amatic SC', cursive;
+text-align: center;
+text-shadow: 1px 1.5px #727171;
+}
+
+.board {
+  margin: 0 auto;
+  width:80vh;
+  height:80vh;
+  background-color:#dedfe0;
+}
+
+.board div {
+  width: 33.3333%;
+  height: 33.3333%;
+  border: 1px solid grey;
+  border-radius: 9px;
+  display: inline-block;
+  margin: 0 auto;
+  background-color: #fefff7;
+
+}
+
+div {
+  font-size: 8em;
+  text-align: center;
+  line-height: 1.5;
+  vertical-align: middle;
+  font-family: sans-serif;
+  margin: 0 auto;
+  color:#cc2e3c;
+  font-family: 'Amatic SC', cursive;
+  font-weight: bolder;
+  box-shadow: 1px 2px 2px #5a5b5b;
+  text-shadow: 1px 3px plum;
+
+}
+
+
+
+.endGame {
+  font-size: 1.5em;
+  text-align: center;
+
+}
