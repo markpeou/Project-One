@@ -14,20 +14,31 @@ text-align: center;
 text-shadow: 1px 1.5px #727171;
 }
 
+h2 {
+  font-size: 1.5em;
+  font-family: 'Amatic SC', cursive;
+  text-align: center;
+  text-shadow: 0.5px 1px #727171;
+
+
+}
+
 .board {
   margin: 0 auto;
   width:80vh;
   height:80vh;
+  padding: 1.5%;
   background-color:#dedfe0;
+
 }
 
 .board div {
   width: 33.3333%;
   height: 33.3333%;
   border: 1px solid grey;
-  border-radius: 9px;
+  border-radius: 8px;
   display: inline-block;
-  margin: 0 auto;
+  margin: 1px 0px 1px auto;
   background-color: #fefff7;
 
 }
@@ -42,15 +53,11 @@ div {
   color:#cc2e3c;
   font-family: 'Amatic SC', cursive;
   font-weight: bolder;
-  box-shadow: 1px 2px 2px #5a5b5b;
-  text-shadow: 1px 3px plum;
+  box-shadow: 1px 4px 4px #5a5b5b;
+  text-shadow: 2px 5px plum;
 
 }
 
-
-
-.endGame {
-  font-size: 1.5em;
-  text-align: center;
-
+.sq{
+  transform: rotateY(180deg);
 }
