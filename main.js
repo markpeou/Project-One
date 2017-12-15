@@ -1,4 +1,4 @@
-
+console.log('tic tac toe');
 var one = document.getElementById('b1')
 var two = document.getElementById('b2')
 var three = document.getElementById('b3')
@@ -18,15 +18,12 @@ var counter = 0
 //                    ['b3','b6','b9']
 //                    ['b1','b5','b9']
 //                    ['b3','b5','b7']
-// var $ = function(selector) {
-//   return document.querySelector(selector)
-// }
+
 function setMessage(msg){
   document.getElementById('message').textContent = msg;
 }
 setMessage('X starts')
   var turn = function(event) {
-
   // if textContent = '' then assign 'x'
   // when textContent is not empty
   if (event.target.textContent !== "") {
@@ -42,7 +39,7 @@ setMessage('X starts')
     event.target.textContent = 'O' ;
     setMessage("X's Turn")
   }
-  //record players turns, so put into array
+
   checkForWin()
  }
 
@@ -111,8 +108,8 @@ setMessage('X starts')
     }
 //
 function checkDraw() {
-    document.querySelectorAll('.sq').textContent != '' ||
-    document.querySelectorAll('.sq').textContent != ''
+    document.querySelectorAll('.sq').textContent ==! 'X' ||
+    document.querySelectorAll('.sq').textContent ==! 'O'
         return setMessage('its a draw')
       }
 
