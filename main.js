@@ -10,7 +10,14 @@ var eight = document.getElementById('b8')
 var nine = document.getElementById('b9')
 
 var counter = 0
-
+// var winningCombo = ['b1','b2','b3']
+//                    ['b4','b5','b6']
+//                    ['b7','b8','b9']
+//                    ['b1','b4','b7']
+//                    ['b2','b5','b8']
+//                    ['b3','b6','b9']
+//                    ['b1','b5','b9']
+//                    ['b3','b5','b7']
 // var $ = function(selector) {
 //   return document.querySelector(selector)
 // }
@@ -29,20 +36,24 @@ setMessage('X starts')
     //changing players
  if (counter % 2 !== 0) {
     event.target.textContent = 'X' ;
-    board = event.target
     setMessage("O's Turn")
 
  } else {
     event.target.textContent = 'O' ;
-    board = event.target = 'o';
     setMessage("X's Turn")
   }
   //record players turns, so put into array
   checkForWin()
  }
 
-
  function checkForWin() {
+   //loop through id's to see if it contains an 'x' or an 'o'
+  //   for ( i = 0; i > winningCombo.length; i++) {
+  //
+  //
+  // }
+
+
   if (document.getElementById('b1').textContent === 'X' &&
       document.getElementById('b2').textContent === 'X' &&
       document.getElementById('b3').textContent === 'X' ||
@@ -95,17 +106,22 @@ setMessage('X starts')
         document.getElementById('b5').textContent === 'O' &&
         document.getElementById('b7').textContent === 'O') {
         return setMessage('o wins!')
+        checkDraw()
       }
     }
 //
+function checkDraw() {
+    document.querySelectorAll('.sq').textContent != '' ||
+    document.querySelectorAll('.sq').textContent != ''
+        return setMessage('its a draw')
+      }
 
+//     return setMessasge('its a draw')
+// }
 // check if box is full or empty if empty game is still going
   // if box is filled then game has finished
 
 //     }  else if (
-//     document.querySelectorAll('.sq').textContent != 'O' ||
-//     document.querySelectorAll('.sq').textContent != 'X')
-//         return setMessage('its a draw')
 // }
 
 
