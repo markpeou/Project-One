@@ -1,56 +1,52 @@
 console.log('tic tac toe');
-var one = document.getElementById('b1')
-var two = document.getElementById('b2')
-var three = document.getElementById('b3')
-var four = document.getElementById('b4')
-var five = document.getElementById('b5')
-var six = document.getElementById('b6')
-var seven = document.getElementById('b7')
-var eight = document.getElementById('b8')
-var nine = document.getElementById('b9')
+var one = document.getElementById('b1');
+var two = document.getElementById('b2');
+var three = document.getElementById('b3');
+var four = document.getElementById('b4');
+var five = document.getElementById('b5');
+var six = document.getElementById('b6');
+var seven = document.getElementById('b7');
+var eight = document.getElementById('b8');
+var nine = document.getElementById('b9');
 
-var counter = 0
-// var winningCombo = ['b1','b2','b3']
-//                    ['b4','b5','b6']
-//                    ['b7','b8','b9']
-//                    ['b1','b4','b7']
-//                    ['b2','b5','b8']
-//                    ['b3','b6','b9']
-//                    ['b1','b5','b9']
-//                    ['b3','b5','b7']
+var counter = 0;
+var winningCombo = ['b1','b2','b3'];
+                   ['b4','b5','b6'];
+                   ['b7','b8','b9'];
+                   ['b1','b4','b7'];
+                   ['b2','b5','b8'];
+                   ['b3','b6','b9'];
+                   ['b1','b5','b9'];
+                   ['b3','b5','b7'];
 
-function setMessage(msg){
+function setMessage(msg) {
   document.getElementById('message').textContent = msg;
 }
 setMessage('X starts')
   var turn = function(event) {
   // if textContent = '' then assign 'x'
   // when textContent is not empty
-  if (event.target.textContent !== "") {
-    return setMessage('pick another square');
-  }
-    counter++
+    if (event.target.textContent !== "") {
+      return setMessage('pick another square');
+    }
+      counter++
     //changing players
- if (counter % 2 !== 0) {
-    event.target.textContent = 'X' ;
-    setMessage("O's Turn")
+    if (counter % 2 !== 0) {
+      event.target.textContent = 'X';
+      setMessage("O's Turn")
 
  } else {
-    event.target.textContent = 'O' ;
+    event.target.textContent = 'O';
     setMessage("X's Turn")
   }
 
-  checkForWin()
+  checkForWin(checkDraw())
  }
 
  function checkForWin() {
    //loop through id's to see if it contains an 'x' or an 'o'
   //   for ( i = 0; i > winningCombo.length; i++) {
-  //
-  //
   // }
-
-
   if (document.getElementById('b1').textContent === 'X' &&
       document.getElementById('b2').textContent === 'X' &&
       document.getElementById('b3').textContent === 'X' ||
@@ -103,24 +99,14 @@ setMessage('X starts')
         document.getElementById('b5').textContent === 'O' &&
         document.getElementById('b7').textContent === 'O') {
         return setMessage('o wins!')
-        checkDraw()
       }
     }
 //
 function checkDraw() {
-    document.querySelectorAll('.sq').textContent ==! 'X' ||
-    document.querySelectorAll('.sq').textContent ==! 'O'
-        return setMessage('its a draw')
+      if (counter === 9) {
+        return setMessage('its a draw!!!')
       }
-
-//     return setMessasge('its a draw')
-// }
-// check if box is full or empty if empty game is still going
-  // if box is filled then game has finished
-
-//     }  else if (
-// }
-
+    }
 
 
 
